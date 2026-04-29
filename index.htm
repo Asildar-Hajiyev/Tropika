@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+    <header class="w-full shadow-sm bg-gray-100">
+    <nav class="container mx-auto px-4 py-3">
+        
+        <div class="flex items-center justify-between">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+            <img class="w-10 h-10" src="img/imgi_1_logo.png" alt="">
+            <h2 class="uppercase font-bold text-xl md:text-2xl">Tropiko</h2>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex">
+            <ul class="text-gray-600 text-md flex items-center gap-6 lg:gap-18">
+                <li><a href="#home"onclick="loadPage('home')">Home</a></li>
+                <li><a href="#fruits" onclick="loadPage('fruits')">Fruits</a></li>
+                <li><a href="#services" onclick="loadPage('services')">Services</a></li>
+                <li><a href="#contact" onclick="loadPage('contact')">Contact Us</a></li>
+                <li><img class="w-6" src="img/imgi_10_search-icon.png" alt=""></li>
+                <li>
+                    <button class="px-3 py-1 rounded-md text-white bg-orange-600 uppercase text-sm">
+                    Get A Quote
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Mobile Menu Icon -->
+        <div class="md:hidden">
+            <img id="bars" onclick="barS()" class="w-10 cursor-pointer" src="img/imgi_9_menu.png" alt="">
+        </div>
+
+        </div>
+    </nav>
+    </header>
+   <div id="barsmenu"
+     class="fixed top-0 left-0 w-full h-full bg-white z-50 hidden flex-col gap-6 p-6 animate__animated">
+
+  <p onclick="barS()" class="cursor-pointer absolute top-4 right-4 text-xl">❌</p>
+
+  <ul class="text-gray-600 text-xl flex flex-col items-center gap-4 mt-10">
+    <li><a href="#" onclick="loadPage('index'), barS()"></a>>Home</a></li>
+    <li><a href="#fruits" onclick="loadPage('fruits'), barS()">Fruits</a></li>
+    <li><a href="#services" onclick="loadPage('services'), barS() ">Services</a></li>
+    <li><a href="#contact" onclick="loadPage('contact') , barS()">Contact Us</a></li>
+
+    <img class="w-6" src="img/imgi_10_search-icon.png" alt="">
+
+    <button class="px-3 py-1 rounded-md text-white bg-orange-600 uppercase text-sm">
+      Get A Quote
+    </button>
+  </ul>
+</div>
+        <div id="overlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
+    <main class="" id="content">
+         
+    </main>
+
+        <footer class="w-full">
+             <div class="w-full md:w-4/5 mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <!-- Fruits -->
+                <div>
+                <h3 class="text-2xl font-semibold mb-4">Fruits</h3>
+                <p class="text-gray-600 leading-7 max-w-[220px]">
+                    randomised words which don't look even slightly believable.
+                    If you are going to use a passage of Lorem Ipsum,
+                </p>
+                </div>
+
+                <!-- Services -->
+                <div>
+                <h3 class="text-2xl font-semibold mb-4">Services</h3>
+                <p class="text-gray-600 leading-7 max-w-[220px]">
+                    randomised words which don't look even slightly believable.
+                    If you are going to use a passage of Lorem Ipsum,
+                </p>
+                </div>
+
+                <!-- List -->
+                <div>
+                <h3 class="text-2xl font-semibold mb-4">List</h3>
+                <p class="text-gray-600 leading-7 max-w-[220px]">
+                    randomised words which don't look even slightly believable.
+                    If you are going to use a passage of Lorem Ipsum,
+                </p>
+                </div>
+
+                <!-- Follow -->
+                <div>
+                <h3 class="text-2xl font-semibold mb-4">Follow Us</h3>
+
+                <div class="flex gap-3 mb-6 flex-wrap">
+                    <img class="w-8 h-8 object-contain" src="../img/imgi_5_fb.png" alt="">
+                    <img class="w-8 h-8 object-contain" src="../img/imgi_6_twitter.png" alt="">
+                    <img class="w-8 h-8 object-contain" src="../img/imgi_7_linkedin.png" alt="">
+                    <img class="w-8 h-8 object-contain" src="../img/imgi_8_instagram.png" alt="">
+                </div>
+
+                <h3 class="text-xl font-semibold mb-3">Subscribe Now</h3>
+
+                <input
+                    class="border border-gray-400 w-full px-3 py-2 mb-3 outline-none focus:border-orange-500"
+                    type="text"
+                    placeholder="Your Email"
+                >
+
+                <a
+                    class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded"
+                    href="#"
+                >
+                    Subscribe
+                </a>
+                </div>
+
+            </div>
+
+            </div>
+
+    </div>
+          <div class=" text-center italic font-thin text-xl bg-gray-300 py-4" >
+              Copyright © 2019 All Rights Reserved By Free Html Templates
+          </div>
+        </footer>
+    <script src="js/app.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
